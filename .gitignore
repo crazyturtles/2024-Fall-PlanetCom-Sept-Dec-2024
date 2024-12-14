@@ -1,0 +1,5 @@
+
+*.vsidx
+PumpMaster-V1/pump_master/.env
+express/.env
+/express/node_modules

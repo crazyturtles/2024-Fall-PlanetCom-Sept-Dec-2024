@@ -1,0 +1,21 @@
+.supplier-page {
+    display: flex;
+    justify-content: center;
+}
+
+.supplier-page>div {
+    padding: 3rem;
+    margin: 2rem;
+    display: flex;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.supplier-page h1 {
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+
+

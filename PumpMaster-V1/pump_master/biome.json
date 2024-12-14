@@ -1,0 +1,64 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+	"files": { "ignoreUnknown": false, "ignore": [] },
+	"formatter": { "enabled": true, "indentStyle": "tab" },
+	"organizeImports": { "enabled": true },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {},
+			"complexity": {
+				"noBannedTypes": "error",
+				"noUselessTypeConstraint": "error",
+				"noEmptyTypeParameters": "error",
+				"noUselessEmptyExport": "error",
+				"useOptionalChain": "off",
+				"useLiteralKeys": "off",
+				"noForEach": "off"
+			},
+			"correctness": {
+				"noPrecisionLoss": "error",
+				"noUnusedVariables": "off",
+				"useArrayLiterals": "off",
+				"noUnusedImports": "warn",
+				"noInnerDeclarations": "off",
+				"useExhaustiveDependencies": "off"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "error",
+					"fix": "safe",
+					"options": {}
+				}
+			},
+			"style": {
+				"noNamespace": "error",
+				"useAsConstAssertion": "error",
+				"noVar": "off",
+				"noParameterAssign": "off",
+				"useTemplate": "off",
+				"useSingleVarDeclarator": "off",
+				"noCommaOperator": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "off",
+				"noDoubleEquals": "off",
+				"noExtraNonNullAssertion": "error",
+				"noMisleadingInstantiator": "error",
+				"noUnsafeDeclarationMerging": "error",
+				"noEmptyBlock": "error",
+				"noCommentText": "error",
+				"noDuplicateAtImportRules": "error",
+				"noRedundantUseStrict": "off",
+				"noAssignInExpressions": "off"
+			},
+			"security": {
+				"noGlobalEval": "off"
+			}
+		}
+	},
+	"javascript": { "formatter": { "quoteStyle": "double" } }
+}

@@ -1,0 +1,148 @@
+.navbar {
+	display: flex;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+	background-color: #dcdcdc;
+	color: #000;
+}
+
+.navbar-left .navbar-logo {
+	width: 150px;
+}
+
+.navbar-center .navbar-menu {
+	color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: white;
+	display: flex;
+	list-style: none;
+	font-size: large;
+	gap: 3rem;
+	padding: 0.75rem 5rem;
+	border-radius: 2rem;
+}
+
+.navbar-menu li {
+	position: relative;
+	cursor: pointer;
+}
+
+.navbar-right {
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.5rem;
+}
+
+.profile-pic {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown .dropdown-toggle {
+	text-transform: uppercase;
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	outline: inherit;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: -10%;
+	background-color: #fff;
+	color: black;
+	list-style: none;
+	padding: 0.5rem 0;
+	margin: 0;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	z-index: 40;
+}
+
+.dropdown:hover .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.dropdown.nested {
+	position: relative;
+	width: 100%;
+}
+
+.dropdown.nested > .dropdown-menu {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	margin-left: 0.5rem;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.dropdown.nested:hover > .dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+}
+
+.dropdown-menu li {
+	white-space: nowrap;
+}
+
+.dropdown-menu li button {
+	background: none;
+	border: none;
+	color: black;
+	cursor: pointer;
+	font: inherit;
+	text-align: left;
+	width: 100%;
+}
+
+.dropdown-menu li:hover {
+	background-color: #f0f0f0;
+}
+
+.username {
+	font-size: 1rem;
+}
+
+.submenu-button {
+	display: flex !important;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	gap: 0.5rem;
+}
+
+.submenu-arrow {
+	margin-left: auto;
+}
+
+.dropdown-menu li button {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 1rem;
+}
+
+.dropdown-toggle .lucide-chevron-down {
+  transition: transform 0.2s ease;
+}
+
+.dropdown:hover .dropdown-toggle .lucide-chevron-down {
+  transform: rotate(180deg);
+}

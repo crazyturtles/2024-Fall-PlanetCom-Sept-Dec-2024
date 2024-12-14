@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "express"
+    },
+    {
+      "path": "PumpMaster-V1/pump_master"
+    }
+  ],
+  "settings": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit"
+    }
+  }
+}

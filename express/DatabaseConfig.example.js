@@ -1,0 +1,6 @@
+module.exports = {
+	SERVER_NAME: "EXAMPLE_SERVER_NAME",
+	DATABASE_NAME: "PumpMasterDB",
+	EXPRESS_PORT: 3001,
+	NODE_PORT: 3000,
+};

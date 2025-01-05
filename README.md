@@ -1,5 +1,5 @@
 # **Pumpmaster Version 3.0** 
-![Jest Tests](https://github.com/DMIT-2590/2024-Fall-PlanetCom/actions/workflows/jest.yml/badge.svg?branch=sprint-3-testing)
+<!--![Jest Tests](https://github.com/DMIT-2590/2024-Fall-PlanetCom/actions/workflows/jest.yml/badge.svg?branch=sprint-3-testing)-->
 
 ![Pumpmaster Logo](PumpMaster-V1/pump_master/public/img/pumpmaster-logo-2.1-transparent.png)
 

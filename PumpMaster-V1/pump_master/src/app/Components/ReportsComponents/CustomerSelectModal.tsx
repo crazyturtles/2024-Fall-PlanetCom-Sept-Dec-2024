@@ -106,9 +106,7 @@ export default function CustomerSelectModal({
 	};
 
 	const sortedCustomers = customers.sort((a, b) => {
-		const [aFirst = "", aLast = ""] = a.CustomerName.split(" ");
-		const [bFirst = "", bLast = ""] = b.CustomerName.split(" ");
-		return aFirst.localeCompare(bFirst) || aLast.localeCompare(bLast);
+		return a.CustomerName.localeCompare(b.CustomerName);
 	});
 
 	// Base fields that are always included

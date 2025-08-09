@@ -6,6 +6,7 @@ export async function GET() {
 			headers: {
 				"Content-Type": "application/json",
 			},
+			next: { revalidate: 0 },
 		});
 
 		if (!response.ok) {

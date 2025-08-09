@@ -7,11 +7,11 @@ router.get("/customers", async (req, res) => {
 		const result = await sql.query(`
            SELECT 
                CustomerID,
-               CustomerFirstName + ' ' + CustomerLastName as CustomerName
+               CustomerCompanyName as CustomerName
            FROM CDS_Customer 
            WHERE CustomerStatus = 1 
                AND CustomerType = 1
-           ORDER BY CustomerLastName, CustomerFirstName
+           ORDER BY CustomerCompanyName
        `);
 		res.json(result.recordset);
 	} catch (error) {
@@ -47,7 +47,7 @@ router.get("/job-history", async (req, res) => {
                 LEFT JOIN CDS_Unit u ON j.JobUnitID = u.UnitID
             )
             SELECT 
-                c.CustomerFirstName + ' ' + c.CustomerLastName as 'Customer',
+                c.CustomerCompanyName as 'Customer',
                 FORMAT(j.JobStartDate, 'dd-MMM-yyyy') as 'Job Date',
                 FORMAT(j.JobPourTime, 'h:mmtt') as 'Pour Time',
                 hu.HistoricalUnitNumber as 'Unit Sent',
@@ -81,8 +81,7 @@ router.get("/job-history", async (req, res) => {
             WHERE j.JobCustomerID = @customerId
             AND (@unitSent IS NULL OR hu.HistoricalUnitNumber LIKE '%' + @unitSent + '%')
             GROUP BY 
-                c.CustomerFirstName,
-                c.CustomerLastName,
+                c.CustomerCompanyName,
                 j.JobID,
                 j.JobStartDate,
                 j.JobPourTime,
